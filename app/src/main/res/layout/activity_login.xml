@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.naresh.kingupadhyay.mathsking.LoginActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginHorizontal="10dp">
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/app_nam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Maths King"
+            android:textSize="30dp"
+            android:textColor="@color/light_red"/>
+
+
+        <TextView
+            android:id="@+id/login_name"
+            android:layout_below="@+id/app_nam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Phone Login"
+            android:textSize="25dp"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/login_name"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/about_us" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/user_name"
+            android:layout_below="@+id/login_name"
+            android:layout_marginLeft="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Full Name"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/user_image"
+            android:layout_width="50dp"
+            android:layout_height="56dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/user_name"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_action_phone" />
+
+        <Spinner
+            android:id="@+id/spinnerCountries"
+            android:layout_toRightOf="@+id/user_image"
+            android:layout_below="@+id/user_name"
+            android:layout_marginTop="25dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+
+        <android.support.design.widget.TextInputLayout
+                android:id="@+id/phone"
+                android:layout_below="@+id/user_name"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Mobile Number"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+            <Button
+                android:id="@+id/send_code"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phone"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:text="Get  OTP"/>
+        <TextView
+            android:id="@+id/time_otp"
+            android:layout_below="@id/phone"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="20dp"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wait..."/>
+        <Button
+            android:id="@+id/resend_code"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/phone"
+            android:layout_alignParentLeft="true"
+            android:visibility="invisible"
+            android:text="Resend Code"/>
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/phone"
+            android:text="Time"
+            android:visibility="invisible"
+            android:layout_alignParentLeft="true" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/user_otp"
+            android:layout_below="@+id/resend_code"
+            android:layout_width="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/otp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/verify"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_otp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_selector"
+            android:text="Verify"/>
+
+        <Button
+            android:id="@+id/help"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/verify"
+            android:text="help? from admin"
+            android:textColor="#0542fc"
+            android:textAllCaps="false"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

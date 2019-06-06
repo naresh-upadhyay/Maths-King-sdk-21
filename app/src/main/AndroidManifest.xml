@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.naresh.kingupadhyay.mathsking">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".MathsDatabase"
+        android:allowBackup="true"
+        android:icon="@mipmap/mathsk"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/mathsk"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:name=".PdfViewerActivity"
+            android:label="@string/title_activity_pdf_viewer"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:name=".DownloadedList"
+            android:label="@string/title_activity_downloaded_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-6924423095909700~8475665982" />
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CourseDetails"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".Basic_activity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:parentActivityName=".CourseDetails">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "http://www.example.com/gizmos”,,,http://docs.google.com/viewerng -->
+                <!-- todo //a important concept is here -->
+                <data
+                    android:host="docs.google.com"
+                    android:pathPrefix="/viewerng"
+                    android:scheme="http" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CourseDetails" />
+        </activity>
+        <activity
+            android:name=".SplashActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".Favourites"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".LoginOption"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:name=".Short_note"
+            android:label="@string/title_activity_short_note"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:name=".Question_bank"
+            android:label="@string/title_activity_question_bank"
+            android:theme="@style/AppTheme" />
+    </application>
+
+</manifest>

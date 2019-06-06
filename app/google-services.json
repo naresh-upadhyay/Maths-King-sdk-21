@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "727386924075",
+    "firebase_url": "https://mathsking-a45fe.firebaseio.com",
+    "project_id": "mathsking-a45fe",
+    "storage_bucket": "mathsking-a45fe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:727386924075:android:b0d503b5a7564f93",
+        "android_client_info": {
+          "package_name": "com.naresh.kingupadhyay.mathsking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "727386924075-t6mtkg5fgs1lgd5q5r591rs5vq1pbbfb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.naresh.kingupadhyay.mathsking",
+            "certificate_hash": "38465c91d70a2c527e491a1dfbd1ab08698fa3f9"
+          }
+        },
+        {
+          "client_id": "727386924075-5579iu89ksiv3ot8mb8fp9u75t9ofmh4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiyinSlaaEjj5jiqKUF_X56NKfg0SEWd4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "727386924075-5579iu89ksiv3ot8mb8fp9u75t9ofmh4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

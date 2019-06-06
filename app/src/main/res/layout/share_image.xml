@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/shareImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:isScrollContainer="true"
+        android:src="@mipmap/mathsk"
+        android:layout_marginBottom="50dp"
+        tools:maxHeight="@android:dimen/dialog_min_width_minor" />
+    <Button
+        android:id="@+id/shareHere"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:hint="Send"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:textAllCaps="false"
+        android:textColor="#0f0"
+        android:background="@drawable/send_button_select"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" />
+    <Button
+        android:id="@+id/cancelHere"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:hint="Cancel"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:textAllCaps="false"
+        android:textColor="#f00"
+        android:background="@drawable/cancel_button_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" />
+</RelativeLayout>

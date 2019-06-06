@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:background="@color/app_background"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageButton
+                        android:id="@+id/back"
+                        android:src="@drawable/ic_action_back"
+                        android:tint="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackgroundBorderless" />
+
+                    <Spinner
+                        android:id="@+id/spinner_determinants"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="100dp"
+                        android:layout_centerInParent="true"/>
+
+                    <ImageButton
+                        android:id="@+id/refresh_determinants"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_action_refresh"
+                        android:layout_marginRight="12dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/button_selector"
+                        android:text="Refresh"/>
+                </RelativeLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/appbar"
+            android:background="@color/app_background"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                android:id="@+id/myrecyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/reCyclerview"
+                android:clipToPadding="false"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:scrollbars="vertical"
+                android:background="@color/colorPrimaryDark"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+            <android.support.v7.widget.RecyclerView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                android:id="@+id/reCyclerview"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorPrimaryDark"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/advCourse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:layout_alignParentBottom="true"
+                ads:adSize="SMART_BANNER"
+                ads:adUnitId="ca-app-pub-6924423095909700/9644263689">
+            </com.google.android.gms.ads.AdView>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

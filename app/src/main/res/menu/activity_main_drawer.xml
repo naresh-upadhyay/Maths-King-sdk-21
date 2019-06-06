@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/home"
+            android:title="Home" />
+        <!--item
+            android:id="@+id/r_books"
+            android:icon="@drawable/book"
+            android:title="Recommended Books" />
+        <item
+            android:id="@+id/r_sites"
+            android:icon="@drawable/web"
+            android:title="Recommended sites" /-->
+
+        <item
+            android:id="@+id/favourite"
+            android:icon="@drawable/favourite"
+            android:title="Favourite" />
+        <item
+            android:id="@+id/downloaded"
+            android:icon="@drawable/ic_action_download"
+            android:title="Offline saved" />
+    </group>
+
+    <item android:title="Application">
+        <menu>
+            <item
+                android:id="@+id/update"
+                android:icon="@drawable/update"
+                android:title="Update" />
+            <item
+                android:id="@+id/share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <!--item
+                android:id="@+id/settings"
+                android:icon="@drawable/settings"
+                android:title="Settings" /-->
+            <item
+                android:id="@+id/r_us"
+                android:icon="@drawable/rate"
+                android:title="Rate us" />
+            <item
+                android:id="@+id/a_us"
+                android:icon="@drawable/about_us"
+                android:title="About us" />
+            <item
+                android:id="@+id/help"
+                android:icon="@drawable/feedback"
+                android:title="Feedback or Help" />
+            <!--item
+                android:id="@+id/disclaimer"
+                android:icon="@drawable/disclaimer"
+                android:title="Disclaimer" /-->
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/logout"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginOption">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginHorizontal="10dp">
+
+        <RelativeLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/app_nam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maths King"
+                android:textSize="30dp"
+                android:textColor="@color/light_red"/>
+
+
+            <TextView
+                android:id="@+id/login_name"
+                android:layout_below="@+id/app_nam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Login Options"
+                android:textSize="25dp"
+                android:textColor="@color/black"/>
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/sign_in_button"
+                android:layout_width="150dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/login_name"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:id="@+id/phoneAuth"
+                android:layout_below="@+id/sign_in_button"
+                android:layout_width="150dp"
+                android:text="Phone"
+                android:drawableTint="@color/white"
+                android:background="@drawable/phone_auth_button_selector"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/skip"
+                android:layout_below="@+id/phoneAuth"
+                android:layout_width="150dp"
+                android:text="Skip"
+                android:drawableTint="@color/white"
+                android:background="@drawable/phone_auth_button_selector"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+    </ScrollView>
+    <ProgressBar
+        android:id="@+id/loginProgress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerInParent="true" />
+
+
+</RelativeLayout>

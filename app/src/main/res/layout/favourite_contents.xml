@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fav_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical"
+    android:background="@drawable/boarder_line_background"
+    android:foreground="?attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/boarder_line_background"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/fav_concept"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/md_keylines"
+            android:layout_marginTop="@dimen/md_keylines"
+            android:layout_marginBottom="@dimen/md_keylines"
+            android:layout_marginRight="@dimen/md_keylines"
+            tools:text="@string/item_desc"
+            android:ellipsize="end"
+            android:singleLine="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/article_subheading" />
+
+        <RelativeLayout
+            android:id="@+id/reConceptImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fav_concept">
+
+            <ImageView
+                android:id="@+id/fav_concept_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:background="@drawable/boarder_line_background"/>
+        </RelativeLayout>
+
+
+
+
+        <Button
+            android:id="@+id/fav_expand_ques"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reConceptImage"
+            style="?android:attr/borderlessButtonStyle"
+            android:textAllCaps="false"
+            android:text="Question"
+            android:textColor="@color/white"/>
+
+        <ImageButton
+            android:id="@+id/fav_add_favorite"
+            android:layout_width="@dimen/cards_button_width"
+            android:layout_height="@dimen/cards_button_height"
+            android:layout_marginRight="@dimen/md_keylines"
+            app:srcCompat="@drawable/favourite_blank"
+            android:tint="@color/red"
+            android:layout_below="@+id/reConceptImage"
+            android:layout_alignParentRight="true"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fav_question_layout"
+            android:layout_marginBottom="0.01dp"
+            android:background="@drawable/boarder_line_background"
+            android:layout_below="@+id/fav_expand_ques">
+            <TextView
+                android:id="@+id/fav_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/md_keylines"
+                android:layout_marginTop="@dimen/md_keylines"
+                android:layout_marginBottom="@dimen/md_keylines"
+                android:layout_marginRight="@dimen/md_keylines"
+                tools:text="@string/item_desc"
+                android:ellipsize="end"
+                android:singleLine="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/article_subheading" />
+
+            <RelativeLayout
+                android:id="@+id/reQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fav_question">
+
+                <ImageView
+                    android:id="@+id/fav_question_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/boarder_line_background"/>
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/fav_expand_ans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reQuestion"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="Answer"
+                android:textAllCaps="false"
+                android:textColor="@color/white"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/fav_answer_layout"
+                android:layout_marginBottom="0.01dp"
+                android:background="@drawable/boarder_line_background"
+                android:layout_below="@+id/fav_expand_ans">
+                <TextView
+                    android:id="@+id/fav_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/md_keylines"
+                    android:layout_marginTop="@dimen/md_keylines"
+                    android:layout_marginBottom="@dimen/md_keylines"
+                    android:layout_marginRight="@dimen/md_keylines"
+                    tools:text="@string/item_desc"
+                    android:ellipsize="end"
+                    android:singleLine="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/article_subheading" />
+
+                <RelativeLayout
+                    android:id="@+id/reAnswer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fav_answer">
+
+                    <ImageView
+                        android:id="@+id/fav_answer_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="false"
+                        android:background="@drawable/boarder_line_background"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
